@@ -7,9 +7,9 @@
 </ion-header>
 
 <ion-content padding>
-  <button ion-button (click)="setItem()">Add Item</button>
-  <ion-input [(ngModel)]="item"></ion-input>
-  <button ion-button (click)="getItens()">Show Itens</button>
+  <ion-input [(ngModel)]="item" placeholder="Add Item..."></ion-input>
+  <button ion-button block (click)="setItem()">Add Item</button>
+  <button ion-button block (click)="getItens()">Show Itens</button>
   <ion-list>
     <ion-item *ngFor="let item of itens" class="item" (click)="deleteItem(item)">
       {{item.name}}
