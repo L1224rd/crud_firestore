@@ -44,7 +44,6 @@ export class HomePage {
             if (a.name < b.name) return -1;
             return 0;
           });
-          this.getItens();
         });
       })
       .catch((error) => {
