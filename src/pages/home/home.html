@@ -1,14 +1,18 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      Firebase
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <button ion-button (click)="setItem()">Add Item</button>
+  <ion-input [(ngModel)]="item"></ion-input>
+  <button ion-button (click)="getItens()">Show Itens</button>
+  <ion-list>
+    <ion-item *ngFor="let item of itens" class="item" (click)="deleteItem(item)">
+      {{item.name}}
+    </ion-item>
+  </ion-list>
 </ion-content>
